@@ -1,18 +1,28 @@
-package cn.itcast.domain;
+package cn.itcast.entity;
 
 import java.util.Date;
 
 public class User {
-    private String uName;
+    private String name;
     private int age;
     private Date date;
 
-    public String getuName() {
-        return uName;
+
+    public User() {
     }
 
-    public void setuName(String uName) {
-        this.uName = uName;
+    public User(String name, int age, Date date) {
+        this.name = name;
+        this.age = age;
+        this.date = date;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getAge() {
@@ -35,7 +45,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "uName='" + uName + '\'' +
+                "uName='" + name + '\'' +
                 ", age=" + age +
                 ", date=" + date +
                 '}';
